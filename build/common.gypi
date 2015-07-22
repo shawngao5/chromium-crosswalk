@@ -571,6 +571,9 @@
       # Enable Webp support by default.
       'disable_webp%': 0,
 
+      # Enable canvas by default.
+      'disable_canvas%': 1,
+
       # Enable angle by default.
       'disable_angle%': 0,
 
@@ -1250,6 +1253,7 @@
     'disable_sync_compositor%': '<(disable_sync_compositor)',
     'disable_xslt%': '<(disable_xslt)',
     'disable_webp%': '<(disable_webp)',
+    'disable_canvas%': '<(disable_canvas)',
     'disable_angle%': '<(disable_angle)',
     'use_icu_alternatives_on_android%': '<(use_icu_alternatives_on_android)',
     'enable_task_manager%': '<(enable_task_manager)',
@@ -3046,6 +3050,9 @@
       }],
       ['disable_webp==1', {
         'defines': ['DISABLE_WEBP=1'],
+      }],
+      ['disable_canvas==1', {
+        'defines': ['DISABLE_CANVAS=1'],
       }],
       ['OS=="android" and disable_angle==1', {
         'defines': ['DISABLE_ANGLE_ON_ANDROID=1'],
